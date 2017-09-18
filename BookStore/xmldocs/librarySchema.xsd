@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.qwerty.by/librarySchema" xmlns:tns="http://www.qwerty.by/librarySchema"
+	elementFormDefault="qualified">
+
+	<xs:element name="books" type="tns:books_type" />
+
+	<xs:complexType name="books_type">
+		<xs:sequence>
+			<xs:element name="book" type="tns:book_type" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="book_type">
+		<xs:sequence>
+			<xs:element name="ISBN" type="tns:ISBN_type" minOccurs="0" maxOccurs="unbounded"  />
+			<xs:element name="title" type="xs:string" />
+			<xs:element name="pages" type="xs:int" />
+			<xs:element name="author" type="tns:author_type"
+				minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:int" />
+	</xs:complexType>
+
+	<xs:complexType name="author_type">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="date-of-birth" type="xs:date" />
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:int" />
+	</xs:complexType>
+
+	<xs:complexType name="ISBN_type">
+		<xs:attribute name="number" type="xs:int" />
+	</xs:complexType>
+
+</xs:schema>

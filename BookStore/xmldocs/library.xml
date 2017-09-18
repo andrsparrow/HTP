@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books xmlns="http://www.qwerty.by/librarySchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.qwerty.by/librarySchema librarySchema.xsd">
+
+	<book id="1">
+		<title>Book1</title>
+		<pages>10</pages>
+		<author>
+			<name>Author1</name>
+			<date-of-birth>1962-11-07</date-of-birth>
+		</author>
+	</book>
+	<book id="2">
+		<ISBN number="0001" />
+		<title>Book2</title>
+		<pages>66</pages>
+		<author>
+			<name>Author2</name>
+			<date-of-birth>1972-11-07</date-of-birth>
+		</author>
+	</book>
+	<book id="3">
+		<title>Book3</title>
+		<pages>666</pages>
+		<author>
+			<name>Author2</name>
+			<date-of-birth>1962-02-07</date-of-birth>
+		</author>
+	</book>
+</books>
